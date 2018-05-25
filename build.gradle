@@ -3,9 +3,10 @@ buildscript {
     repositories {
         mavenLocal()
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
         classpath "com.github.dcendents:android-maven-gradle-plugin:1.4.1"
     }
@@ -15,6 +16,7 @@ allprojects {
     repositories {
         mavenLocal()
         jcenter()
+        google()
     }
 
     tasks.withType(Javadoc).all {
@@ -24,10 +26,10 @@ allprojects {
 }
 
 ext {
-    minSdkVersion = 10
-    compileSdkVersion = 23
+    minSdkVersion = 17
+    compileSdkVersion = 27
     targetSdkVersion = compileSdkVersion
-    buildToolsVersion = '23.0.2'
+    buildToolsVersion = '26.0.2'
     supportLibVersion = '23.0.1'
     javaVersion = JavaVersion.VERSION_1_7
 
